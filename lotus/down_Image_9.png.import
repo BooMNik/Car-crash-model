@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bdumn726jagng"
+path.s3tc="res://.godot/imported/down_Image_9.png-38ff4c9da35cff3dfa9f015028a9f276.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "75a691c1a566933f40b87f9b3ec19366"
+}
+
+[deps]
+
+source_file="res://lotus/down_Image_9.png"
+dest_files=["res://.godot/imported/down_Image_9.png-38ff4c9da35cff3dfa9f015028a9f276.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://lotus/down_Image_9.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
