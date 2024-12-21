@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dnr02g56b4kd6"
+path.s3tc="res://.godot/imported/crashedcar_Numberplates_dif.png-c2ec74318143a1fa615cf5b14d16ab6d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "da3da05f00d3caef6299f64ac091b52f"
+}
+
+[deps]
+
+source_file="res://cars/Models/crashedcar_Numberplates_dif.png"
+dest_files=["res://.godot/imported/crashedcar_Numberplates_dif.png-c2ec74318143a1fa615cf5b14d16ab6d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

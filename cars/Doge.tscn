@@ -1,0 +1,176 @@
+[gd_scene load_steps=15 format=3 uid="uid://ci52bv1m15cbs"]
+
+[ext_resource type="PackedScene" uid="uid://duy0dbkychify" path="res://cars/BaseCar.tscn" id="1_cfkas"]
+[ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://Doge/Wheel.glb" id="2_eoiid"]
+[ext_resource type="PackedScene" uid="uid://cjw4dj1bo6dv2" path="res://lotus1/cpot.glb" id="3_0htt6"]
+[ext_resource type="Script" path="res://cars/fps.gd" id="3_sdxfo"]
+[ext_resource type="PackedScene" uid="uid://5neetvxoj82k" path="res://lotus1/cpotcrash.glb" id="4_negl5"]
+[ext_resource type="PackedScene" uid="uid://derfjshrgdunx" path="res://lotus1/door.glb" id="5_1ou5n"]
+[ext_resource type="PackedScene" uid="uid://7xfa20ef0q2u" path="res://lotus1/doorcrashcrash.glb" id="6_cwq01"]
+[ext_resource type="PackedScene" uid="uid://curf2umy0ajlk" path="res://lotus/down.glb" id="7_fnbfx"]
+[ext_resource type="PackedScene" uid="uid://bo3e05w4k1hyi" path="res://lotus/downcrash.glb" id="8_50jtv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7qdn"]
+radius = 0.291194
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xaafv"]
+size = Vector3(0.542114, 1.7092, 1.53265)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7kmqy"]
+radius = 0.363529
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2kbn"]
+size = Vector3(2.06943, 0.876137, 1.64674)
+
+[sub_resource type="FogMaterial" id="FogMaterial_60rke"]
+density = 8.0
+albedo = Color(0, 0, 0, 1)
+emission = Color(1, 1, 1, 1)
+
+[node name="Lotus" instance=ExtResource("1_cfkas")]
+STEER_LIMIT = 0.4
+engine_force_value = 50
+
+[node name="wheal0" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.340338, -1.50006)
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+suspension_travel = 0.357
+
+[node name="Wheel" parent="wheal0" index="0" instance=ExtResource("2_eoiid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal1" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02668, 0.340338, -1.50006)
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+suspension_travel = 0.357
+
+[node name="Wheel" parent="wheal1" index="0" instance=ExtResource("2_eoiid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
+
+[node name="wheal2" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.286814, 1.26411)
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+suspension_travel = 0.357
+
+[node name="Wheel" parent="wheal2" index="0" instance=ExtResource("2_eoiid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal3" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02668, 0.286814, 1.26411)
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+suspension_travel = 0.357
+
+[node name="Wheel" parent="wheal3" index="0" instance=ExtResource("2_eoiid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026385, 0.827398, 0.719927)
+
+[node name="Camera3D" parent="look" index="0"]
+target_distance = 5
+speed = 10.0
+
+[node name="Label" parent="Hud" index="1"]
+text = "Arow keys to drive
+Space to drift and break
+1-Cam1
+2-Cam2
+L-salon light
+N-headlights
+"
+
+[node name="FPS" type="Label" parent="Hud" index="2"]
+offset_left = 3.0
+offset_top = 281.0
+offset_right = 43.0
+offset_bottom = 304.0
+script = ExtResource("3_sdxfo")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.590649, -2.08042)
+shape = SubResource("CapsuleShape3D_n7qdn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.000778168, 0.603737, -1.11035)
+shape = SubResource("BoxShape3D_xaafv")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.000778168, 0.653567, 1.63592)
+shape = SubResource("CapsuleShape3D_7kmqy")
+
+[node name="Car" type="AudioStreamPlayer3D" parent="." index="10"]
+
+[node name="Area3D" type="Area3D" parent="." index="11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115967, 0.816368, -1.69197)
+shape = SubResource("BoxShape3D_o2kbn")
+
+[node name="Area3D2" type="Area3D" parent="." index="12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123748, 0.808475, -0.191018)
+shape = SubResource("BoxShape3D_o2kbn")
+
+[node name="Area3D3" type="Area3D" parent="." index="13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115967, 0.752731, 1.33109)
+shape = SubResource("BoxShape3D_o2kbn")
+
+[node name="cpot" parent="." index="14" instance=ExtResource("3_0htt6")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+
+[node name="cpotcrash" parent="." index="15" instance=ExtResource("4_negl5")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+visible = false
+
+[node name="door" parent="." index="16" instance=ExtResource("5_1ou5n")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+
+[node name="doorcrashcrash" parent="." index="17" instance=ExtResource("6_cwq01")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+visible = false
+
+[node name="down" parent="." index="18" instance=ExtResource("7_fnbfx")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+
+[node name="downcrash" parent="." index="19" instance=ExtResource("8_50jtv")]
+transform = Transform3D(-0.535, 0, -4.67712e-08, 0, 0.535, 0, 4.67712e-08, 0, -0.535, 0, 0, -0.243042)
+visible = false
+
+[node name="FogVolume" type="FogVolume" parent="." index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0238763, 0.325552, 1.34141)
+size = Vector3(0.45206, 0.2095, 1.45782)
+material = SubResource("FogMaterial_60rke")
+
+[node name="Camera1" type="Camera3D" parent="." index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323498, 1.09747, 0.128324)
+fov = 55.0
+
+[node name="SaloneLight" type="OmniLight3D" parent="." index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0298383, 1.20878, -0.470968)
+visible = false
+light_color = Color(1, 1, 0.901961, 1)
+shadow_enabled = true
+
+[node name="LightCar2" type="SpotLight3D" parent="." index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.714104, 0.689371, -2.02926)
+visible = false
+spot_range = 40.0503
+spot_angle = 28.7922
+
+[node name="LightCar" type="SpotLight3D" parent="." index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.626979, 0.689371, -2.02926)
+visible = false
+spot_range = 40.0503
+spot_angle = 28.7922
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]
